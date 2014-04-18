@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="MainForm">
+  <grid id="27dc6" binding="rootPanel" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+    <margin top="0" left="0" bottom="0" right="0"/>
+    <constraints>
+      <xy x="20" y="20" width="871" height="738"/>
+    </constraints>
+    <properties/>
+    <border type="none"/>
+    <children>
+      <grid id="c41d6" layout-manager="GridLayoutManager" row-count="23" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+        <margin top="0" left="0" bottom="0" right="0"/>
+        <constraints>
+          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties/>
+        <border type="none"/>
+        <children>
+          <component id="300a" class="javax.swing.JButton" binding="task1Button">
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="1.Ввести строки из файла, записать в список. Вывести строки в файл в обратном порядке."/>
+            </properties>
+          </component>
+          <component id="9c948" class="javax.swing.JButton" binding="task2Button">
+            <constraints>
+              <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="2.Создать список из элементов каталога и его подкаталогов."/>
+            </properties>
+          </component>
+          <component id="123fa" class="javax.swing.JButton" binding="task3Button">
+            <constraints>
+              <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="3.Занести стихотворения одного автора в список. Провести сортировку по возрастанию длин строк."/>
+            </properties>
+          </component>
+          <component id="70f67" class="javax.swing.JButton" binding="task4Button">
+            <constraints>
+              <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="4.Определить множество на основе множества целых чисел."/>
+            </properties>
+          </component>
+          <component id="51bf0" class="javax.swing.JButton" binding="task5Button">
+            <constraints>
+              <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="5.Списки I(1..n) и U(1..n) содержат результаты n-измерений тока и напряжения..."/>
+            </properties>
+          </component>
+          <component id="eb362" class="javax.swing.JButton" binding="task6Button">
+            <constraints>
+              <grid row="5" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="6.С использованием множества выполнить попарное суммирование..."/>
+            </properties>
+          </component>
+          <component id="4d930" class="javax.swing.JButton" binding="task7Button">
+            <constraints>
+              <grid row="6" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="7.Сложить два многочлена заданной степени..."/>
+            </properties>
+          </component>
+          <component id="7d5c6" class="javax.swing.JButton" binding="task8Button">
+            <constraints>
+              <grid row="7" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="8.Умножить два многочлена заданной степени..."/>
+            </properties>
+          </component>
+          <component id="f1cad" class="javax.swing.JButton" binding="task9Button">
+            <constraints>
+              <grid row="8" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="9.Задана строка, содержащая символы '(', ')', '[', ']', '{', '}'..."/>
+            </properties>
+          </component>
+          <component id="624aa" class="javax.swing.JButton" binding="task10Button">
+            <constraints>
+              <grid row="9" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="10. Задан файл с текстом на английском языке...Использовать класс HashSet."/>
+            </properties>
+          </component>
+          <component id="9fa6e" class="javax.swing.JButton" binding="task11Button">
+            <constraints>
+              <grid row="10" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="11.Задан файл с текстом на английском языке...  Использовать класс HashMap."/>
+            </properties>
+          </component>
+          <component id="e74c0" class="javax.swing.JButton" binding="task12Button">
+            <constraints>
+              <grid row="11" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="12. В кругу стоят N человек, пронумерованных от 1 до N..."/>
+            </properties>
+          </component>
+          <component id="b0fda" class="javax.swing.JButton" binding="task13Button">
+            <constraints>
+              <grid row="12" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="13. -"/>
+            </properties>
+          </component>
+          <component id="c0b56" class="javax.swing.JButton" binding="a14Button" default-binding="true">
+            <constraints>
+              <grid row="13" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="14. -"/>
+            </properties>
+          </component>
+          <component id="87402" class="javax.swing.JButton" binding="task15Button">
+            <constraints>
+              <grid row="14" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="15. На базе коллекций реализовать структуру хранения чисел"/>
+            </properties>
+          </component>
+          <component id="b5b6" class="javax.swing.JButton" binding="task16Button">
+            <constraints>
+              <grid row="15" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="16.Во входном файле расположены два набора положительных чисел"/>
+            </properties>
+          </component>
+          <component id="329b6" class="javax.swing.JButton" binding="a18Button" default-binding="true">
+            <constraints>
+              <grid row="17" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="18.-"/>
+            </properties>
+          </component>
+          <component id="95ad4" class="javax.swing.JButton" binding="a19Button" default-binding="true">
+            <constraints>
+              <grid row="18" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="19.-"/>
+            </properties>
+          </component>
+          <component id="ebf70" class="javax.swing.JButton" binding="a20Button" default-binding="true">
+            <constraints>
+              <grid row="19" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="20.-"/>
+            </properties>
+          </component>
+          <component id="6ac83" class="javax.swing.JButton" binding="task21Button">
+            <constraints>
+              <grid row="20" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="21. Реализовать структуру &quot;черный ящик&quot;"/>
+            </properties>
+          </component>
+          <component id="2b4c9" class="javax.swing.JButton" binding="task22Button">
+            <constraints>
+              <grid row="21" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="22.На прямой гоночной трассе стоит N автомобилей. Определить, сколько произойдет обгонов."/>
+            </properties>
+          </component>
+          <component id="ad8b6" class="javax.swing.JButton" binding="a17Button" default-binding="true">
+            <constraints>
+              <grid row="16" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="17.-"/>
+            </properties>
+          </component>
+          <component id="39da0" class="javax.swing.JButton" binding="task23Button">
+            <constraints>
+              <grid row="22" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="23.На прямой гоночной трассе стоит N автомобилей"/>
+            </properties>
+          </component>
+        </children>
+      </grid>
+    </children>
+  </grid>
+</form>
