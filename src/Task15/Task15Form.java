@@ -7,7 +7,7 @@ import java.awt.event.KeyEvent;
 /**
  * Created by vipmax on 15.04.2014.
  */
-public class Task15Form extends JFrame{
+public class Task15Form extends JFrame {
     private Task15 task15;
     private JTextField addTextField;
     private JTextField deleteTextField;
@@ -42,7 +42,7 @@ public class Task15Form extends JFrame{
             }
         });
 
-        deleteTextField.addKeyListener( new KeyAdapter() {
+        deleteTextField.addKeyListener(new KeyAdapter() {
             @Override
             public void keyReleased(KeyEvent e) {
                 if (e.getKeyCode() == KeyEvent.VK_ENTER) {

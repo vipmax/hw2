@@ -1,7 +1,6 @@
 package Task9;
 
 import javax.swing.*;
-import java.awt.*;
 
 /**
  * Created by vipmax on 15.04.2014.
@@ -21,7 +20,7 @@ public class Task9Form extends JFrame {
         setSize(700, 300);
         setVisible(true);
 
-        checkButton.addActionListener(e-> {
+        checkButton.addActionListener(e -> {
             String text = textArea1.getText();
             Boolean isValid = task9.validate(text);
 

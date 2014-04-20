@@ -34,7 +34,7 @@ public class Task1Form extends JFrame {
         });
 
         chooseFileButton.addActionListener(e -> {
-            if(!textArea1.getText().isEmpty())
+            if (!textArea1.getText().isEmpty())
                 textArea1.setText("");
             JFileChooser fileChooser = new JFileChooser(System.getProperty("user.dir"));
             int openDialog = fileChooser.showOpenDialog(this);

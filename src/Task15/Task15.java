@@ -17,6 +17,7 @@ public class Task15 {
     public void add(Double number) {
         myList.add(number);
     }
+
     public void delete(Double number) {
         myList.remove(number);
     }

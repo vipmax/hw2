@@ -7,7 +7,7 @@ import java.awt.event.KeyEvent;
 /**
  * Created by vipmax on 13.04.2014.
  */
-public class Task4Form extends  JFrame {
+public class Task4Form extends JFrame {
 
     private Task4 task4;
     private JTextField textField1;
@@ -29,22 +29,22 @@ public class Task4Form extends  JFrame {
         textField1.addKeyListener(new KeyAdapter() {
             @Override
             public void keyReleased(KeyEvent e) {
-               if(e.getKeyCode()== KeyEvent.VK_ENTER){
-                   if(textField1.getText().matches("[0-9]+")){
-                       Integer value =Integer.valueOf(textField1.getText());
-                       task4.set1.add(value);
-                       textArea1.setText(task4.set1.toString());
-                       textField1.setText("");
-                   }
-               }
+                if (e.getKeyCode() == KeyEvent.VK_ENTER) {
+                    if (textField1.getText().matches("[0-9]+")) {
+                        Integer value = Integer.valueOf(textField1.getText());
+                        task4.set1.add(value);
+                        textArea1.setText(task4.set1.toString());
+                        textField1.setText("");
+                    }
+                }
             }
         });
         textField2.addKeyListener(new KeyAdapter() {
             @Override
             public void keyReleased(KeyEvent e) {
-                if(e.getKeyCode()== KeyEvent.VK_ENTER){
-                    if(textField2.getText().matches("[0-9]+")){
-                        Integer value =Integer.valueOf(textField2.getText());
+                if (e.getKeyCode() == KeyEvent.VK_ENTER) {
+                    if (textField2.getText().matches("[0-9]+")) {
+                        Integer value = Integer.valueOf(textField2.getText());
                         task4.set2.add(value);
                         textArea2.setText(task4.set2.toString());
                         textField2.setText("");
@@ -53,10 +53,10 @@ public class Task4Form extends  JFrame {
             }
         });
 
-        intersectionsButton.addActionListener(e-> {
+        intersectionsButton.addActionListener(e -> {
             resulTextArea.setText(task4.set1.intersection(task4.set2).toString());
         });
-        unionButton.addActionListener(e->{
+        unionButton.addActionListener(e -> {
             resulTextArea.setText(task4.set1.union(task4.set2).toString());
         });
     }

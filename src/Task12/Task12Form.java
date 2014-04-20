@@ -1,7 +1,8 @@
 package Task12;
 
 import javax.swing.*;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 /**
@@ -15,7 +16,7 @@ public class Task12Form extends JFrame {
     private JLabel time2Label;
     private JPanel rootPanel;
 
-    public Task12Form(Task12 task12){
+    public Task12Form(Task12 task12) {
         this.task12 = task12;
         setContentPane(rootPanel);
         pack();
@@ -42,16 +43,16 @@ public class Task12Form extends JFrame {
             }
 
             Long startTime = System.nanoTime();
-                task12.handleListPeople(peopleArrayList);
-                Long endArrayList = System.nanoTime();
-                time1Label.setText(String.format("%,d ns", endArrayList - startTime));
+            task12.handleListPeople(peopleArrayList);
+            Long endArrayList = System.nanoTime();
+            time1Label.setText(String.format("%,d ns", endArrayList - startTime));
 
 
             startTime = System.nanoTime();
 
-                task12.handleListPeople(peopleLinkedList);
-                Long endLinkedList = System.nanoTime();
-                time2Label.setText(String.format("%,d ns",endLinkedList - startTime));
+            task12.handleListPeople(peopleLinkedList);
+            Long endLinkedList = System.nanoTime();
+            time2Label.setText(String.format("%,d ns", endLinkedList - startTime));
 
 
         });

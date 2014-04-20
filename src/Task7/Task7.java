@@ -14,7 +14,7 @@ public class Task7 {
         new Task7Form(this);
     }
 
-    public Map<Integer, Double> summ(Map<Integer, Double> map1,Map<Integer, Double> map2) {
+    public Map<Integer, Double> summ(Map<Integer, Double> map1, Map<Integer, Double> map2) {
         Map<Integer, Double> resultMap = new HashMap<>();
 
         if (map2.size() < map1.size()) {

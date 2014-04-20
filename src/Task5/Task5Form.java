@@ -1,9 +1,6 @@
 package Task5;
 
 import javax.swing.*;
-import java.awt.event.KeyAdapter;
-import java.awt.event.KeyEvent;
-import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -11,7 +8,7 @@ import java.util.List;
  */
 public class Task5Form extends JFrame {
 
-    private  Task5 task5;
+    private Task5 task5;
     private JPanel rootPanel;
 
     private JTextArea ItextArea1;
@@ -26,7 +23,7 @@ public class Task5Form extends JFrame {
         setSize(1100, 300);
         setVisible(true);
 
-        calcButton.addActionListener(e-> {
+        calcButton.addActionListener(e -> {
 
             List<Double> listI = task5.listDoubleFromString(ItextArea1.getText());
             List<Double> listU = task5.listDoubleFromString(UtextArea2.getText());
@@ -44,9 +41,8 @@ public class Task5Form extends JFrame {
             Double R = task5.calculateR(listI, listU);
             RtextArea3.setText(R.toString());
 
-            System.out.println(listI +"\n"+listU);
+            System.out.println(listI + "\n" + listU);
         });
-
 
 
     }

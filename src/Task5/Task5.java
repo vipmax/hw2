@@ -21,7 +21,7 @@ public class Task5 {
         String lines[] = text.split(" ");
         List<Double> list = new ArrayList<>();
         for (String line : lines) {
-            if(line.isEmpty()) continue;
+            if (line.isEmpty()) continue;
             try {
                 list.add(Double.valueOf(line));
             } catch (NumberFormatException e) {
@@ -35,21 +35,21 @@ public class Task5 {
         if (listI.size() != listU.size()) return null;
 
         int n = listI.size();
-        Double summI= Double.valueOf(0),summU= Double.valueOf(0);
+        Double summI = Double.valueOf(0), summU = Double.valueOf(0);
         for (int i = 0; i < n; i++) {
-            summI+=listI.get(i);
-            summU+=listU.get(i);
+            summI += listI.get(i);
+            summU += listU.get(i);
         }
 
-        Double avgI = summI/n, avgU = summU/n;
+        Double avgI = summI / n, avgU = summU / n;
 
-        Double up = Double.valueOf(0),down = Double.valueOf(0);
+        Double up = Double.valueOf(0), down = Double.valueOf(0);
         for (int i = 0; i < n; i++) {
             up += (listI.get(i) - avgI) * (listU.get(i) - avgU);
             down += ((listI.get(i) - avgI)) * ((listI.get(i) - avgI));
         }
 
 
-        return up/down;
+        return up / down;
     }
 }

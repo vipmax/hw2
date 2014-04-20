@@ -1,7 +1,9 @@
 package Task22and23;
 
 import javax.swing.*;
-import java.awt.event.*;
+import java.awt.event.KeyEvent;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
 
 public class AddAutoDialog extends JFrame {
     private final Task22Form task22Form;

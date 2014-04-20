@@ -22,11 +22,11 @@ public class Task12 {
 //            }
 //        }
 
-        while (list.size() > 1){
-            Iterator iterator =  list.iterator();
-            for (int i = 0; iterator.hasNext(); i++,iterator.next()){
-                if (i % 2 == 1){
-                    i=0;
+        while (list.size() > 1) {
+            Iterator iterator = list.iterator();
+            for (int i = 0; iterator.hasNext(); i++, iterator.next()) {
+                if (i % 2 == 1) {
+                    i = 0;
                     iterator.remove();
                 }
             }

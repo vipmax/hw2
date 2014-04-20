@@ -1,6 +1,8 @@
 package Task6;
 
-import java.util.*;
+import java.util.Iterator;
+import java.util.Set;
+import java.util.TreeSet;
 
 /**
  * Created by vipmax on 13.04.2014.
@@ -18,7 +20,7 @@ public class Task6 {
         String lines[] = text.split(" ");
         Set<Double> set = new TreeSet<>();
         for (String line : lines) {
-            if(line.isEmpty()) continue;
+            if (line.isEmpty()) continue;
             try {
                 set.add(Double.valueOf(line));
             } catch (NumberFormatException e) {

@@ -19,12 +19,12 @@ public class Task8 {
         int m = list2.size();
 
 
-        for (int i = 0; i < n+m-1; i++) {
+        for (int i = 0; i < n + m - 1; i++) {
             resultList.add(i, 0.0);
         }
 
         for (int i = 0; i < n; i++) {
-            for (int j = 0; j <m; j++) {
+            for (int j = 0; j < m; j++) {
                 resultList.set(i + j, resultList.get(i + j) + list1.get(i) * list2.get(j));
             }
         }

@@ -1,10 +1,9 @@
 package Task11;
 
-import Task10.Task10;
-
 import javax.swing.*;
 import java.io.File;
-import java.util.*;
+import java.util.List;
+import java.util.Map;
 
 /**
  * Created by vipmax on 15.04.2014.
@@ -38,14 +37,13 @@ public class Task11Form extends JFrame {
             }
         });
 
-        showDifferentWordsButton.addActionListener(e-> {
+        showDifferentWordsButton.addActionListener(e -> {
             Map<String, Integer> stringIntegerMap = task11.toMap(task11.getList());
 
 
-
             resultTextArea.setText("");
-            stringIntegerMap.forEach((key,value) ->{
-                resultTextArea.append(key + " ("+value+")" + "\n");
+            stringIntegerMap.forEach((key, value) -> {
+                resultTextArea.append(key + " (" + value + ")" + "\n");
             });
 
         });

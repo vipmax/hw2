@@ -5,6 +5,7 @@ package Task21;
  */
 public class Task21 {
     BlackBox<Integer> blackBox;
+
     public Task21() {
         blackBox = new BlackBox<Integer>();
         new Task21Form(this);
@@ -13,11 +14,12 @@ public class Task21 {
     public void add(Integer number) {
         blackBox.add(number);
     }
+
     public String getBlackboxString() {
         return blackBox.toString();
     }
 
-    public Integer find(Integer k)throws IndexOutOfBoundsException{
+    public Integer find(Integer k) throws IndexOutOfBoundsException {
 
         return blackBox.findMinK(k);
     }

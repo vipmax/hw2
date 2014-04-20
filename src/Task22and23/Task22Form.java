@@ -1,7 +1,6 @@
 package Task22and23;
 
 import javax.swing.*;
-import java.awt.*;
 import java.util.regex.Pattern;
 
 /**
@@ -24,7 +23,7 @@ public class Task22Form extends JFrame {
         this.task22 = task22;
         setContentPane(rootPanel);
         pack();
-        setSize(900,500);
+        setSize(900, 500);
         setVisible(true);
 
 
@@ -43,16 +42,16 @@ public class Task22Form extends JFrame {
 
         });
 
-        defineButton.addActionListener(e-> {
+        defineButton.addActionListener(e -> {
             Integer integer = task22.countOfOvertake(task22.getAutoList());
             resultLabel.setText(integer.toString());
             updateOvertakeInfoTextArea();
         });
 
-        addAutoButton.addActionListener(e-> {
+        addAutoButton.addActionListener(e -> {
             new AddAutoDialog(this);
         });
-        firstKovertakeTextField.addActionListener(e->{
+        firstKovertakeTextField.addActionListener(e -> {
             Integer k;
             Pattern numberPattern = Pattern.compile("[1-9]([0-9])*");
 
@@ -80,6 +79,6 @@ public class Task22Form extends JFrame {
         overtakeInfoTextArea.setText("");
         task22.getOvertakeList().forEach(overtake -> overtakeInfoTextArea.append(overtake + "\n"));
     }
-    
-    
+
+
 }

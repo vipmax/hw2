@@ -1,14 +1,13 @@
 package Task21;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 
 /**
  * Created by vipmax on 16.04.2014.
  */
-public class BlackBox<T extends Number &  Comparable<T>> {
+public class BlackBox<T extends Number & Comparable<T>> {
     List<T> list;
     T K;
 
@@ -28,7 +27,7 @@ public class BlackBox<T extends Number &  Comparable<T>> {
         list.add(value);
     }
 
-    public T findMinK(T k) throws IndexOutOfBoundsException{
+    public T findMinK(T k) throws IndexOutOfBoundsException {
         Collections.sort(list);
         return list.get(k.intValue());
     }

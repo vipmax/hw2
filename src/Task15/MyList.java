@@ -11,6 +11,7 @@ import java.util.function.Consumer;
  */
 public class MyList implements Collection {
     List<Double> list;
+
     public MyList() {
         list = new ArrayList<>();
     }
@@ -47,7 +48,7 @@ public class MyList implements Collection {
 
     @Override
     public boolean add(Object o) {
-        return list.add((Double)o);
+        return list.add((Double) o);
     }
 
     @Override

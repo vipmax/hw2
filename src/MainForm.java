@@ -1,5 +1,13 @@
 import Task1.Task1;
+import Task10.Task10;
+import Task11.Task11;
+import Task12.Task12;
+import Task14.Task14Form;
+import Task15.Task15;
+import Task16.Task16;
 import Task2.Task2;
+import Task21.Task21;
+import Task22and23.Task22;
 import Task3.Task3;
 import Task4.Task4;
 import Task5.Task5;
@@ -7,20 +15,6 @@ import Task6.Task6;
 import Task7.Task7;
 import Task8.Task8;
 import Task9.Task9;
-import Task10.Task10;
-import Task11.Task11;
-import Task12.Task12;
-
-
-import Task15.Task15;
-import Task16.Task16;
-
-
-
-
-
-import Task21.Task21;
-import Task22and23.Task22;
 
 import javax.swing.*;
 import java.awt.*;
@@ -43,7 +37,7 @@ public class MainForm extends JFrame {
     private JButton task12Button;
     private JButton task13Button;
     private JPanel rootPanel;
-    private JButton a14Button;
+    private JButton task14Button;
     private JButton task15Button;
     private JButton task16Button;
     private JButton a17Button;
@@ -63,24 +57,22 @@ public class MainForm extends JFrame {
         task2Button.addActionListener(e -> new Task2());
         task3Button.addActionListener(e -> new Task3());
         task4Button.addActionListener(e -> new Task4());
-        task5Button.addActionListener( e -> new Task5());
-        task6Button.addActionListener( e -> new Task6());
-        task7Button.addActionListener( e -> new Task7());
-        task8Button.addActionListener( e -> new Task8());
-        task9Button.addActionListener( e -> new Task9());
-        task10Button.addActionListener(e ->new Task10());
-        task11Button.addActionListener(e ->new Task11());
-        task12Button.addActionListener(e ->new Task12());
+        task5Button.addActionListener(e -> new Task5());
+        task6Button.addActionListener(e -> new Task6());
+        task7Button.addActionListener(e -> new Task7());
+        task8Button.addActionListener(e -> new Task8());
+        task9Button.addActionListener(e -> new Task9());
+        task10Button.addActionListener(e -> new Task10());
+        task11Button.addActionListener(e -> new Task11());
+        task12Button.addActionListener(e -> new Task12());
+
+        task14Button.addActionListener(e -> new Task14Form());
+        task15Button.addActionListener(e -> new Task15());
+        task16Button.addActionListener(e -> new Task16());
 
 
-        task15Button.addActionListener(e ->new Task15());
-        task16Button.addActionListener(e ->new Task16());
-
-
-
-
-        task21Button.addActionListener(e ->new Task21());
-        task22Button.addActionListener(e ->new Task22());
-        task23Button.addActionListener(e ->new Task22());
+        task21Button.addActionListener(e -> new Task21());
+        task22Button.addActionListener(e -> new Task22());
+        task23Button.addActionListener(e -> new Task22());
     }
 }

@@ -1,7 +1,6 @@
 package Task6;
 
 import javax.swing.*;
-import java.awt.*;
 import java.util.Set;
 
 /**
@@ -22,13 +21,13 @@ public class Task6Form extends JFrame {
         setSize(800, 300);
         setVisible(true);
 
-       calcButton.addActionListener(e-> {
-           Set<Double> doubles = task6.setDoubleFromString(textArea.getText());
-           textArea.setText("");
-           doubles.forEach(elem -> textArea.append(elem.toString() + " "));
-           System.out.println(doubles);
-           Double value = task6.calc(doubles);
-           resultArea2.setText(value.toString());
-       });
+        calcButton.addActionListener(e -> {
+            Set<Double> doubles = task6.setDoubleFromString(textArea.getText());
+            textArea.setText("");
+            doubles.forEach(elem -> textArea.append(elem.toString() + " "));
+            System.out.println(doubles);
+            Double value = task6.calc(doubles);
+            resultArea2.setText(value.toString());
+        });
     }
 }

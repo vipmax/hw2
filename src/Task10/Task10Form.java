@@ -10,7 +10,7 @@ import java.util.Set;
  */
 public class Task10Form extends JFrame {
 
-    private  Task10 task10;
+    private Task10 task10;
     private JPanel rootPanel;
     private JButton chooseFileButton;
     private JTextArea inputTextArea;
@@ -23,7 +23,7 @@ public class Task10Form extends JFrame {
         setSize(600, 500);
         setVisible(true);
 
-        chooseFileButton.addActionListener(e->{
+        chooseFileButton.addActionListener(e -> {
             JFileChooser fileChooser = new JFileChooser(System.getProperty("user.dir"));
             fileChooser.setFileSelectionMode(JFileChooser.FILES_ONLY);
             int openDialog = fileChooser.showOpenDialog(null);
@@ -32,11 +32,11 @@ public class Task10Form extends JFrame {
                 List<String> list = task10.listFromFile(selectedFile);
                 task10.setList(list);
                 inputTextArea.setText("");
-                list.forEach(str-> inputTextArea.append(str + "\n"));
+                list.forEach(str -> inputTextArea.append(str + "\n"));
             }
         });
 
-        showDifferentWordsButton.addActionListener(e-> {
+        showDifferentWordsButton.addActionListener(e -> {
             Set<String> set = task10.toSet(task10.getList());
             resultTextArea.setText("");
             set.forEach(elem -> resultTextArea.append(elem + "\n"));

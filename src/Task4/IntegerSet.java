@@ -8,6 +8,7 @@ import java.util.TreeSet;
  */
 public class IntegerSet {
     Set<Integer> set;
+
     public IntegerSet() {
         set = new TreeSet<>();
     }

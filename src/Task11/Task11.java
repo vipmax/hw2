@@ -1,7 +1,10 @@
 package Task11;
 
 import java.io.*;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 /**
  * Created by vipmax on 15.04.2014.
@@ -44,7 +47,6 @@ public class Task11 {
     }
 
 
-
     public Map<String, Integer> toMap(List<String> list) {
         Map<String, Integer> map = new HashMap<>();
 
@@ -53,7 +55,7 @@ public class Task11 {
 
             for (String word : words) {
                 if (map.containsKey(word)) {
-                    map.put(word, map.get(word)+1);
+                    map.put(word, map.get(word) + 1);
                     continue;
                 }
                 map.put(word, 1);
@@ -61,7 +63,7 @@ public class Task11 {
 
         });
 
-        return  map;
+        return map;
     }
 }
 

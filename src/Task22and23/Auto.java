@@ -9,7 +9,7 @@ import java.util.Random;
 enum AutoName {
     BMV, MERSEDES, MAZDA, LADA, ZAPOROJEC;
 
-    static String  getRandomName() {
+    static String getRandomName() {
         int nextInt = new Random().nextInt(count());
         return AutoName.values()[nextInt].toString();
 
@@ -37,6 +37,10 @@ public class Auto {
         this.position = position;
     }
 
+    public static Auto getRandomAuto() {
+        return new Auto(AutoName.getRandomName(), new Random().nextDouble() * 200, new Random().nextDouble() * 100);
+    }
+
     public Double getSpeed() {
         return speed;
     }
@@ -53,10 +57,6 @@ public class Auto {
         this.position = position;
     }
 
-    public static Auto getRandomAuto() {
-        return new Auto(AutoName.getRandomName(), new Random().nextDouble()*200, new Random().nextDouble()*100);
-    }
-
     public Auto copy() {
         return new Auto(new String(this.name), new Double(this.speed), new Double(this.position));
     }
@@ -64,6 +64,6 @@ public class Auto {
 
     @Override
     public String toString() {
-        return  name+ " Скорость " + String.format("%.2f",speed) + " км/ч Положение=" + String.format("%.2f",position)+" м" ;
+        return name + " Скорость " + String.format("%.2f", speed) + " км/ч Положение=" + String.format("%.2f", position) + " м";
     }
 }
