@@ -7,6 +7,9 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="Jama-1.0.3" level="project" />
+    <orderEntry type="library" name="commons-math3-3.2" level="project" />
+    <orderEntry type="library" name="colt" level="project" />
   </component>
 </module>
 

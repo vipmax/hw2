@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="commons-math3-3.2">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/src/Task20/commons-math3-3.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/src/Task20/linearmath.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
