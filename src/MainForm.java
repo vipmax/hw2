@@ -2,10 +2,13 @@ import Task1.Task1;
 import Task10.Task10;
 import Task11.Task11;
 import Task12.Task12;
+import Task13.Task13;
 import Task14.Task14Form;
 import Task15.Task15;
 import Task16.Task16;
+import Task19.Task19;
 import Task2.Task2;
+import Task20.Task20;
 import Task21.Task21;
 import Task22and23.Task22;
 import Task3.Task3;
@@ -15,8 +18,6 @@ import Task6.Task6;
 import Task7.Task7;
 import Task8.Task8;
 import Task9.Task9;
-import Task19.Task19;
-import Task20.Task20;
 
 import javax.swing.*;
 import java.awt.*;
@@ -67,7 +68,7 @@ public class MainForm extends JFrame {
         task10Button.addActionListener(e -> new Task10());
         task11Button.addActionListener(e -> new Task11());
         task12Button.addActionListener(e -> new Task12());
-
+        task13Button.addActionListener(e -> new Task13());
         task14Button.addActionListener(e -> new Task14Form());
         task15Button.addActionListener(e -> new Task15());
         task16Button.addActionListener(e -> new Task16());
@@ -75,8 +76,6 @@ public class MainForm extends JFrame {
 
         task19Button.addActionListener(e -> new Task19());
         task20Button.addActionListener(e -> new Task20());
-
-
         task21Button.addActionListener(e -> new Task21());
         task22Button.addActionListener(e -> new Task22());
         task23Button.addActionListener(e -> new Task22());
