@@ -16,6 +16,7 @@ import Task7.Task7;
 import Task8.Task8;
 import Task9.Task9;
 import Task19.Task19;
+import Task20.Task20;
 
 import javax.swing.*;
 import java.awt.*;
@@ -44,7 +45,7 @@ public class MainForm extends JFrame {
     private JButton a17Button;
     private JButton a18Button;
     private JButton task19Button;
-    private JButton a20Button;
+    private JButton task20Button;
     private JButton task21Button;
     private JButton task22Button;
     private JButton task23Button;
@@ -73,6 +74,7 @@ public class MainForm extends JFrame {
 
 
         task19Button.addActionListener(e -> new Task19());
+        task20Button.addActionListener(e -> new Task20());
 
 
         task21Button.addActionListener(e -> new Task21());
