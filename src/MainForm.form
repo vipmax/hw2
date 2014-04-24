@@ -144,12 +144,12 @@
               <text value="16.Во входном файле расположены два набора положительных чисел"/>
             </properties>
           </component>
-          <component id="329b6" class="javax.swing.JButton" binding="a18Button" default-binding="true">
+          <component id="329b6" class="javax.swing.JButton" binding="task18Button">
             <constraints>
               <grid row="17" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
-              <text value="18.-"/>
+              <text value="18. На клетчатой бумаге нарисован круг."/>
             </properties>
           </component>
           <component id="95ad4" class="javax.swing.JButton" binding="task19Button">
@@ -184,12 +184,12 @@
               <text value="22.На прямой гоночной трассе стоит N автомобилей. Определить, сколько произойдет обгонов."/>
             </properties>
           </component>
-          <component id="ad8b6" class="javax.swing.JButton" binding="a17Button" default-binding="true">
+          <component id="ad8b6" class="javax.swing.JButton" binding="task17Button">
             <constraints>
               <grid row="16" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
-              <text value="17.-"/>
+              <text value="17. На плоскости задано N точек."/>
             </properties>
           </component>
           <component id="39da0" class="javax.swing.JButton" binding="task23Button">
