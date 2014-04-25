@@ -7,6 +7,12 @@ import java.util.List;
 import java.util.Map;
 
 /**
+ * 11.Задан файл с текстом на английском языке.
+ * Выделить все различные слова.
+ * Для каждого слова подсчитать частоту его встречаемости.
+ * Слова, отличающиеся регистром букв, считать различными.
+ * Использовать класс HashMap.
+ *
  * Created by vipmax on 15.04.2014.
  */
 public class Task11 {
@@ -25,6 +31,11 @@ public class Task11 {
         this.list = list;
     }
 
+    /**
+     * текст из файла записывает в список
+     * @param file файл
+     * @return список строк
+     */
     public List<String> listFromFile(File file) {
 
         List<String> list = new ArrayList<>();
@@ -46,7 +57,11 @@ public class Task11 {
 
     }
 
-
+    /**
+     * возвращяет все различные слова с учетом частоты встречаемости.
+     * @param list список строк с ьекстом
+     * @return
+     */
     public Map<String, Integer> toMap(List<String> list) {
         Map<String, Integer> map = new HashMap<>();
 

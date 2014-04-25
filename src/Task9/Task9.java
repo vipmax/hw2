@@ -3,6 +3,9 @@ package Task9;
 import java.util.Stack;
 
 /**
+ * 9.Задана строка, содержащая символы '(', ')', '[', ']', '{', '}'.
+ * Проверить правильность расстановки скобок.
+ * Использовать стек.
  * Created by vipmax on 15.04.2014.
  */
 public class Task9 {
@@ -25,6 +28,11 @@ public class Task9 {
                 && closing == ']' || opening == '{' && closing == '}';
     }
 
+    /**
+     * Проверить правильность расстановки скобок.
+     * @param input текст
+     * @return правильность расстановки скобок в тексте
+     */
     public boolean validate(String input) {
         Stack<Character> stack = new Stack<>();
         for (char c : input.toCharArray()) {

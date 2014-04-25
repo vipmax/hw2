@@ -3,6 +3,7 @@ package Task18;
 import java.awt.geom.Point2D;
 
 /**
+ * Клетка
  * Created by vipmax on 24.04.2014.
  */
 public class Ceil {
@@ -28,10 +29,15 @@ public class Ceil {
         return true;
     }
 
+    /**
+     * рассчитавает расстоянито до некоторой точки
+     * @param x абсцисса точки
+     * @param y ордината
+     * @return расстояние до точки
+     */
     public Double getDistanceTo(Double x, Double y) {
-        return Math.pow(x - xPosCenter, 2) + Math.pow( y - yPosCenter, 2);
+        return Math.pow(x - xPosCenter, 2) + Math.pow(y - yPosCenter, 2);
     }
-
 
     @Override
     public int hashCode() {
@@ -58,16 +64,22 @@ public class Ceil {
 
     @Override
     public String toString() {
-        return "[" + xPosCenter + yPosCenter + "]";
+        return "[" + xPosCenter + " " + yPosCenter + "]";
     }
 
+    /**
+     * проверяет внутри  ли круга  текущая точка
+     * @param center центр круга
+     * @param radius радиус круга
+     * @return  внутри  ли круга  текущая точка
+     */
     public boolean isInsideCircle(Point2D.Double center, Double radius) {
         boolean isInside;
 
-        boolean isUpRigth = Math.pow(center.getX() - xPosCenter-0.5, 2) + Math.pow(center.getY() - xPosCenter-0.5, 2) < Math.pow(radius, 2);
-        boolean isUpLeft = Math.pow(center.getX() - xPosCenter+0.5, 2) + Math.pow(center.getY() - xPosCenter-0.5, 2) < Math.pow(radius, 2);
-        boolean isDownRigth = Math.pow(center.getX() - xPosCenter+0.5, 2) + Math.pow(center.getY() - xPosCenter+0.5, 2) < Math.pow(radius, 2);
-        boolean isDownleft = Math.pow(center.getX() - xPosCenter-0.5, 2) + Math.pow(center.getY() - xPosCenter+0.5, 2) < Math.pow(radius, 2);
+        boolean isUpRigth = Math.pow(center.getX() - xPosCenter - 0.5, 2) + Math.pow(center.getY() - xPosCenter - 0.5, 2) < Math.pow(radius, 2);
+        boolean isUpLeft = Math.pow(center.getX() - xPosCenter + 0.5, 2) + Math.pow(center.getY() - xPosCenter - 0.5, 2) < Math.pow(radius, 2);
+        boolean isDownRigth = Math.pow(center.getX() - xPosCenter + 0.5, 2) + Math.pow(center.getY() - xPosCenter + 0.5, 2) < Math.pow(radius, 2);
+        boolean isDownleft = Math.pow(center.getX() - xPosCenter - 0.5, 2) + Math.pow(center.getY() - xPosCenter + 0.5, 2) < Math.pow(radius, 2);
 
         isInside = isUpRigth && isUpLeft && isDownRigth && isDownleft;
         return isInside;

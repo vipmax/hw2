@@ -3,6 +3,7 @@ package Task2;
 import javax.swing.*;
 import java.io.File;
 import java.util.List;
+import java.util.function.Predicate;
 
 /**
  * Created by vipmax on 13.04.2014.

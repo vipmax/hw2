@@ -5,6 +5,7 @@ import java.util.Collections;
 import java.util.List;
 
 /**
+ * 3.Занести стихотворения одного автора в список. Провести сортировку по возрастанию длин строк.
  * Created by vipmax on 13.04.2014.
  */
 public class Task3 {

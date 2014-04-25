@@ -5,6 +5,11 @@ import java.util.LinkedList;
 import java.util.List;
 
 /**
+ * 22 и 23.
+ * На прямой гоночной трассе стоит N автомобилей,
+ * для каждого из которых известны начальное положение и скорость.
+ * Определить, сколько произойдет обгонов.
+ * Вывести первые K обгонов
  * Created by vipmax on 17.04.2014.
  */
 public class Task22 {
@@ -16,11 +21,18 @@ public class Task22 {
         new Task22Form(this);
     }
 
+    /**
+     *
+     * @return список обгонов
+     */
     public List<Overtake> getOvertakeList() {
         return overtakeList;
     }
 
 
+   /**
+     * @return список авто
+     */
     public List<Auto> getAutoList() {
         return autoList;
     }
@@ -29,6 +41,11 @@ public class Task22 {
         this.autoList = autoList;
     }
 
+    /**
+     * Создает список с рандомными авто
+     * @param countOfAuto количество авто
+     * @return список с рандомными авто
+     */
     public List<Auto> createAutoList(Integer countOfAuto) {
         List<Auto> resultAutoList = new ArrayList<>();
         for (int i = 0; i < countOfAuto; i++) {
@@ -37,6 +54,10 @@ public class Task22 {
         return resultAutoList;
     }
 
+    /**
+     * @param autoList список машин
+     * @return количество обгонов
+     */
     public Integer countOfOvertake(List<Auto> autoList) {
         Integer count = 0;
         List<Auto> temp = new LinkedList<>(autoList);
@@ -48,9 +69,7 @@ public class Task22 {
                     if (isOvertake(temp.get(0).copy(), temp.get(i).copy())) {
                         count++;
                     }
-                } catch (IndexOutOfBoundsException e) {
-
-                }
+                } catch (IndexOutOfBoundsException e) { }
             }
             temp.remove(0);
         }
@@ -68,12 +87,17 @@ public class Task22 {
 
         boolean auto2IsOvertake = auto2.getSpeed() > auto1.getSpeed() && auto2.getPosition() < auto1.getPosition();
         if (auto2IsOvertake) {
-            overtakeList.add(new Overtake(auto1, auto2));
+            overtakeList.add(new Overtake(auto2, auto1));
         }
 
         return auto1IsOvertake || auto2IsOvertake;
     }
 
+    /**
+     * возвращает список первых К обгонов
+     * @param k число
+     * @return список обгонов
+     */
     public List<Overtake> getKOvertake(Integer k) {
         overtakeList.sort((o1, o2) -> (int) (o1.getOvertakeTime() - o2.getOvertakeTime()));
         List<Overtake> resultList = new ArrayList<>();

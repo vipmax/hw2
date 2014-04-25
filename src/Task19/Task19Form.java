@@ -33,7 +33,7 @@ public class Task19Form extends JFrame {
             addLine();
         });
         defineButton.addActionListener(e -> {
-            Intersection intersection = task19.getInterSectionInfo(task19.getLineList());
+            Intersection intersection = task19.getMinXIntersection(task19.getLineList());
             if (intersection==null) {
                 resultTextArea.setText("Нет точек пересечения");
                 return;

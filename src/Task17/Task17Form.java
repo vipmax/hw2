@@ -1,5 +1,7 @@
 package Task17;
 
+import Services.FileService;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.geom.Line2D;
@@ -51,28 +53,7 @@ public class Task17Form extends JFrame{
             }
         });
         saveToFileButton.addActionListener(e-> {
-            JFileChooser fileChooser = new JFileChooser(System.getProperty("user.dir"));
-            int saveDialog = fileChooser.showSaveDialog(this);
-            if (saveDialog == JFileChooser.APPROVE_OPTION) {
-                File file = fileChooser.getSelectedFile();
-                if (!file.exists()) {
-                    try {
-                        file.createNewFile();
-                    } catch (IOException e1) {
-                        e1.printStackTrace();
-                    }
-                }
-
-                try {
-                    FileWriter fw = new FileWriter(file);
-                    fw.write(resultTextArea.getText());
-                    fw.close();
-                } catch (IOException e1) {
-                    e1.printStackTrace();
-                }
-            }
-
-
+            FileService.saveDataWithFileChooser(resultTextArea.getText());
         });
         findLineButton.addActionListener(e -> {
             saveToFileButton.setVisible(true);

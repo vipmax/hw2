@@ -4,6 +4,7 @@ import java.awt.*;
 import java.awt.geom.Point2D;
 
 /**
+ * Пересечение
  * Created by vipmax on 20.04.2014.
  */
 public class Intersection {
@@ -27,6 +28,11 @@ public class Intersection {
         this.line2 = intersection.line2;
         this.intersectionPoint = line1.intersection(line2);
     }
+
+    /**
+     * проверяет пересечение двух прямых
+     * @return
+     */
     public Boolean isIntersection() {
         return intersectionPoint!=null;
     }
@@ -47,6 +53,10 @@ public class Intersection {
         this.line2 = line2;
     }
 
+    /**
+     *
+     * @return абсцисса точки пересечения
+     */
     public Double getX() {
         if (intersectionPoint == null) {
             return null;
@@ -59,6 +69,10 @@ public class Intersection {
         return line1.toString() + " и " + line2.toString() +  " пересекаются в точке x=  " + String.format("%.2f", intersectionPoint.x);
     }
 
+    /**
+     * копирует
+     * @return
+     */
     public Intersection copy() {
         return new Intersection(new Line(this.line1), new Line(this.line2));
     }

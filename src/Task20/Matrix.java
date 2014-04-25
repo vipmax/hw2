@@ -2,6 +2,10 @@ package Task20;
 
 import java.util.*;
 
+/**
+ * Матрица
+ * @author vipmax
+ */
 public class Matrix {
     int[][] data;
 
@@ -23,6 +27,14 @@ public class Matrix {
 
     }
 
+    /**
+     * Возвразает подматрицу
+     * @param x стока левого верхнего угла
+     * @param y столбец левого верхнего угла
+     * @param rows  стока правого нижнего угла
+     * @param columns столбец правого нижнего угла
+     * @return
+     */
     public Matrix getSubMatrix(int x, int y, int rows, int columns) {
 
 
@@ -42,6 +54,10 @@ public class Matrix {
         return new Matrix(newData);
     }
 
+    /**
+     * определяет количество одниаковых эдементов в матрице
+     * @return количество одниаковых эдементов в матрице
+     */
     public Integer countOfIdenticalElements() {
         Map<Integer, Integer> integerIntegerMap = new Hashtable<>();
         for (int i = 0; i < this.data.length; i++) {
@@ -95,8 +111,8 @@ public class Matrix {
         return true;
     }
 
-        @Override
-        public int hashCode () {
+    @Override
+    public int hashCode () {
             return Arrays.hashCode(data);
         }
     }

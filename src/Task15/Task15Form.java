@@ -50,7 +50,7 @@ public class Task15Form extends JFrame {
                     try {
                         v = Double.parseDouble(deleteTextField.getText());
                     } catch (NumberFormatException e1) {
-                        e1.printStackTrace();
+
                         return;
                     }
                     task15.delete(v);
@@ -69,7 +69,7 @@ public class Task15Form extends JFrame {
                     try {
                         v = Double.parseDouble(findTextField.getText());
                     } catch (NumberFormatException e1) {
-                        e1.printStackTrace();
+
                         return;
                     }
                     Double aDouble = task15.find(v);

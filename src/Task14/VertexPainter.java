@@ -1,9 +1,4 @@
 package Task14;
-
-/**
- * Created by vipmax on 20.04.2014.
- */
-
 import javax.swing.*;
 import javax.swing.event.MouseInputAdapter;
 import java.awt.*;
@@ -15,40 +10,51 @@ import java.util.Collection;
 import java.util.Iterator;
 import java.util.Random;
 
-
+/**
+ * 14. Реализовать класс Graph, представляющий собой неориентированный граф.
+ * В конструкторе класса передается количество вершин в графе.
+ * Методы должны поддерживать быстрое добавление и удаление ребер.
+ * Created by vipmax on 20.04.2014.
+ * @see VertexPainter
+ */
 public class VertexPainter extends JComponent {
 
     private static final Color SHAPE_COLOR = Color.RED;
     private static final Color SELECTED_SHAPE_COLOR = Color.YELLOW;
-    private static final Color SELECTION_COLOR = new Color(150, 150, 250, 50);
     private static final Color SELECTION_BORDER_COLOR = new Color(10, 10, 10);
     private final static int VERTEX_SIZE = 50;
 
-
     private MouseHandler mouseHandler;
     private Collection<Vertex> vertexes;
-    private Point selectionOrigin;
+
     private Point draggingDelta;
     private Vertex draggingVertex;
 
-    public VertexPainter() {
-
+    /**
+     * конструктор
+     * @param count количество ребер
+     */
+    public VertexPainter(Integer count) {
         setOpaque(true);
         mouseHandler = new MouseHandler();
         addMouseListener(mouseHandler);
         addMouseMotionListener(mouseHandler);
-
         vertexes = new ArrayList<>();
+        for (int i = 0; i < count; i++)
+            vertexes.add(new Vertex(new Random().nextInt(700), new Random().nextInt(600), VERTEX_SIZE, VERTEX_SIZE));
+
     }
 
+    /**
+     * создает окно с заданным количеством вершин
+     * @param countOfVertex количество вершин
+     */
     public static void start(Integer countOfVertex) {
         JFrame frame = new JFrame();
-        VertexPainter painter = new VertexPainter();
-        painter.createVertex(countOfVertex);
+        VertexPainter painter = new VertexPainter(countOfVertex);
+
         frame.setBackground(Color.WHITE);
         frame.addKeyListener(new KeyAdapter() {
-
-
             @Override
             public void keyReleased(KeyEvent e) {
                 if (e.getKeyCode() == KeyEvent.VK_DELETE) {
@@ -64,13 +70,9 @@ public class VertexPainter extends JComponent {
         frame.setVisible(true);
     }
 
-    private void createVertex(Integer count) {
-        for (int i = 0; i < count; i++) {
-
-            vertexes.add(new Vertex(new Random().nextInt(700), new Random().nextInt(600), VERTEX_SIZE, VERTEX_SIZE));
-        }
-    }
-
+    /**
+     * удаляет выделенную вершину
+     */
     private void deleteSelectedVertex() {
         Iterator<Vertex> iterator = vertexes.iterator();
         while (iterator.hasNext()) {
@@ -85,6 +87,10 @@ public class VertexPainter extends JComponent {
 
     }
 
+    /**
+     * прорисовка всех компонентов-
+     *
+     */
     @Override
     protected void paintComponent(Graphics graphics) {
         Graphics2D graphics2d = (Graphics2D) graphics;
@@ -112,8 +118,16 @@ public class VertexPainter extends JComponent {
 
     }
 
+
+    /**
+     * обработчик нажатий мыши
+     */
     private class MouseHandler extends MouseInputAdapter {
 
+        /**
+         * перемещение мыши
+         * @param e инфа о положении мыши
+         */
         public void mouseDragged(MouseEvent e) {
             if (SwingUtilities.isLeftMouseButton(e)) {
                 vertexes.stream().filter(vertex -> vertex.contains(e.getPoint())).forEach(vertex -> {
@@ -153,12 +167,20 @@ public class VertexPainter extends JComponent {
             repaint();
         }
 
+        /**
+         * обработка события "кнопка отпущена"
+         * @param e инфа о положении мыши
+         */
         public void mouseReleased(MouseEvent e) {
             draggingDelta = null;
             draggingVertex = null;
             repaint();
         }
 
+        /**
+         *  обработка нажатия мыши
+         * @param e инфа о положении мыши
+         */
         public void mouseClicked(MouseEvent e) {
 
 

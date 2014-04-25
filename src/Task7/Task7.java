@@ -4,16 +4,23 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
+ * 7.Сложить два многочлена заданной степени
+ * если коэффициенты многочленов хранятся в объекте HashMap.
  * Created by vipmax on 14.04.2014.
  */
 public class Task7 {
-
 
     public Task7() {
 
         new Task7Form(this);
     }
 
+    /**
+     *
+     * @param map1 многочлен 1
+     * @param map2 многочлен 2
+     * @return многочлен суммы многоченов 1 и 2
+     */
     public Map<Integer, Double> summ(Map<Integer, Double> map1, Map<Integer, Double> map2) {
         Map<Integer, Double> resultMap = new HashMap<>();
 

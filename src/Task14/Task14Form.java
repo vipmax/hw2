@@ -25,7 +25,7 @@ public class Task14Form extends JFrame {
             Integer countOfVertex = null;
             try {
                 countOfVertex = Integer.valueOf(textField1.getText());
-                new VertexPainter().start(countOfVertex);
+                VertexPainter.start(countOfVertex);
             } catch (NumberFormatException e1) {
                 e1.printStackTrace();
             }

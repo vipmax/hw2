@@ -1,6 +1,8 @@
 package Task4;
 
 /**
+ * 4.Определяет 2 множества на основе множества целых чисел.
+ * @see IntegerSet
  * Created by vipmax on 13.04.2014.
  */
 public class Task4 {

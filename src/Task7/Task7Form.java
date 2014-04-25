@@ -40,6 +40,7 @@ public class Task7Form extends JFrame {
         });
     }
 
+
     private void updateTextArea(Map<Integer, Double> summ, JTextArea textArea) {
         textArea.setText("");
         summ.forEach((key, val) -> {
@@ -64,7 +65,6 @@ public class Task7Form extends JFrame {
             try {
                 values1List.add(Double.valueOf(value1));
             } catch (NumberFormatException e) {
-                e.printStackTrace();
             }
         }
 

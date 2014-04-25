@@ -5,6 +5,10 @@ import java.util.Set;
 import java.util.TreeSet;
 
 /**
+ * 6.С использованием множества выполнить попарное суммирование произвольного конечного ряда чисел по следующим правилам:
+ * на первом этапе суммируются попарно рядом стоящие числа,
+ * на втором этапе суммируются результаты первого этапа и т.д.
+ * до тех пор, пока не останется одно число.
  * Created by vipmax on 13.04.2014.
  */
 public class Task6 {
@@ -15,6 +19,11 @@ public class Task6 {
         new Task6Form(this);
     }
 
+    /**
+     * парсит текст в множество чисел
+     * @param text текст
+     * @return множество чисел
+     */
     public Set<Double> setDoubleFromString(String text) {
 
         String lines[] = text.split(" ");
@@ -30,6 +39,11 @@ public class Task6 {
         return set;
     }
 
+    /**
+     * высчитывает такое число. смотри назначение класса
+     * @param set множество
+     * @return такое число
+     */
     public Double calc(Set<Double> set) {
         Set<Double> tempSet = new TreeSet<>();
         while (set.size() > 1) {
@@ -46,7 +60,6 @@ public class Task6 {
                 }
                 tempSet.add(next + nextnext);
             }
-            System.out.println("tempSet = " + tempSet);
             for (Iterator<Double> doubleIterator = tempSet.iterator(); doubleIterator.hasNext(); ) {
                 Double next = doubleIterator.next();
                 doubleIterator.remove();
@@ -61,7 +74,7 @@ public class Task6 {
 
                 set.add(next + nextnext);
             }
-            System.out.println("set = " + set);
+
         }
 
         Double d = set.iterator().next();

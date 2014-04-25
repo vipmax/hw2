@@ -3,23 +3,9 @@ package Task22and23;
 import java.util.Random;
 
 /**
- * Created by vipmax on 17.04.2014.
+ * Авто
+ * @author vipmax
  */
-
-enum AutoName {
-    BMV, MERSEDES, MAZDA, LADA, ZAPOROJEC;
-
-    static String getRandomName() {
-        int nextInt = new Random().nextInt(count());
-        return AutoName.values()[nextInt].toString();
-
-    }
-
-    static Integer count() {
-        return AutoName.values().length;
-    }
-}
-
 public class Auto {
     private String name;
     private Double speed;
@@ -37,6 +23,10 @@ public class Auto {
         this.position = position;
     }
 
+    /**
+     * создает рандомное авто
+     * @return рандомное авто
+     */
     public static Auto getRandomAuto() {
         return new Auto(AutoName.getRandomName(), new Random().nextDouble() * 200, new Random().nextDouble() * 100);
     }

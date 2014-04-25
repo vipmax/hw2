@@ -1,5 +1,7 @@
 package Task11;
 
+import Services.FileService;
+
 import javax.swing.*;
 import java.io.File;
 import java.util.List;
@@ -25,22 +27,14 @@ public class Task11Form extends JFrame {
         setVisible(true);
 
         chooseFileButton.addActionListener(e -> {
-            JFileChooser fileChooser = new JFileChooser(System.getProperty("user.dir"));
-            fileChooser.setFileSelectionMode(JFileChooser.FILES_ONLY);
-            int openDialog = fileChooser.showOpenDialog(null);
-            if (openDialog == JFileChooser.APPROVE_OPTION) {
-                File selectedFile = fileChooser.getSelectedFile();
-                List<String> list = task11.listFromFile(selectedFile);
-                task11.setList(list);
-                inputTextArea.setText("");
-                list.forEach(str -> inputTextArea.append(str + "\n"));
-            }
+            List<String> list = FileService.openFileWithFileChooser();
+            task11.setList(list);
+            inputTextArea.setText("");
+            list.forEach(str -> inputTextArea.append(str + "\n"));
         });
 
         showDifferentWordsButton.addActionListener(e -> {
             Map<String, Integer> stringIntegerMap = task11.toMap(task11.getList());
-
-
             resultTextArea.setText("");
             stringIntegerMap.forEach((key, value) -> {
                 resultTextArea.append(key + " (" + value + ")" + "\n");

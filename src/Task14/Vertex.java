@@ -1,17 +1,16 @@
 package Task14;
-
-/**
- * Created by vipmax on 20.04.2014.
- */
-
 import java.awt.*;
 import java.awt.geom.Ellipse2D;
 import java.util.ArrayList;
 import java.util.List;
 
-
+/**
+ * Вершина
+ * Created by vipmax on 20.04.2014.
+ */
 public class Vertex extends Ellipse2D.Float {
-    java.util.List<Vertex> conjugateVertex;
+
+    java.util.List<Vertex> conjugateVertex;  //список сопряженныхвершин
     private boolean selected = false;
 
     public Vertex(int x, int y, int w, int h) {
@@ -20,6 +19,9 @@ public class Vertex extends Ellipse2D.Float {
 
     }
 
+    /**
+     * удаляет связи
+     */
     public void removeConjVertex() {
         for (int i = 0; i < conjugateVertex.size(); i++) {
             Vertex vertex = conjugateVertex.get(i);

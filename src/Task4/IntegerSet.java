@@ -4,6 +4,7 @@ import java.util.Set;
 import java.util.TreeSet;
 
 /**
+ * целочисленное множество поддерживает добавление, удаление, пересечение, объединение элементов
  * Created by vipmax on 13.04.2014.
  */
 public class IntegerSet {

@@ -1,6 +1,7 @@
 package Task22and23;
 
 /**
+ * Обгон
  * Created by vipmax on 17.04.2014.
  */
 public class Overtake {
@@ -15,6 +16,10 @@ public class Overtake {
         overtakeTime = (auto2.getPosition() - auto1.getPosition()) * 3.6 / (auto1.getSpeed() - auto2.getSpeed());
     }
 
+    /**
+     * возвращает время обгона
+     * @return время обгона в секунда
+     */
     public Double getOvertakeTime() {
         return overtakeTime;
     }

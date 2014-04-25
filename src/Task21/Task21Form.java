@@ -44,13 +44,13 @@ public class Task21Form extends JFrame {
 
 
                     try {
-                        Integer integer = task21.find(Integer.valueOf(findTextField.getText()));
+                        Integer integer = task21.find(Integer.valueOf(findTextField.getText())-1);
                         findResultLabel.setText(integer.toString());
 
                     } catch (NumberFormatException e1) {
-                        e1.printStackTrace();
+                        findResultLabel.setText("Что то не так :/");
                     } catch (IndexOutOfBoundsException e1) {
-                        e1.printStackTrace();
+                        findResultLabel.setText("проверьте границы :/");
                     }
                 }
             }

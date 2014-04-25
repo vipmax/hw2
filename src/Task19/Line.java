@@ -4,6 +4,7 @@ import java.awt.*;
 import java.awt.geom.Line2D;
 
 /**
+ * Линия
  * Created by vipmax on 20.04.2014.
  */
 public class Line {
@@ -12,8 +13,6 @@ public class Line {
     private Double y1;
     private Double x2;
     private Double y2;
-    private double k;
-    private double b;
 
 
     public Line(Double x1, Double y1, Double x2, Double y2) {
@@ -65,6 +64,11 @@ public class Line {
         this.y2 = y2;
     }
 
+    /**
+     * Возвращаяет точку пересечения текущей прямой с другой
+     * @param line другая линия
+     * @return точку пересечения
+     */
     public Point.Double intersection(Line line) {
         boolean intersect = Line2D.linesIntersect(x1, y1, x2, y2, line.x1, line.y1, line.x2, line.y2);
 

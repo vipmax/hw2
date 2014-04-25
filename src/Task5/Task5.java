@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
+ * 5.Списки I(1..n) и U(1..n) содержат результаты n-измерений тока и напряжения на неизвестном сопротивлении R.
+ * Найти приближенное число R методом наименьших квадратов.
  * Created by vipmax on 13.04.2014.
  */
 public class Task5 {
@@ -15,6 +17,12 @@ public class Task5 {
 
         new Task5Form(this);
     }
+
+    /**
+     * парсит текст в список чисел
+     * @param text текст
+     * @return список чисел
+     */
 
     public List<Double> listDoubleFromString(String text) {
 
@@ -31,6 +39,12 @@ public class Task5 {
         return list;
     }
 
+    /**
+     *
+     * @param listI список с значениями тока
+     * @param listU список с значениями напряжений
+     * @return  сопротивление R
+     */
     public Double calculateR(List<Double> listI, List<Double> listU) {
         if (listI.size() != listU.size()) return null;
 

@@ -1,10 +1,12 @@
 package Task18;
 
+import Services.FileService;
 import com.sun.jnlp.FileOpenServiceImpl;
 
 import javax.jnlp.FileOpenService;
 import javax.jnlp.FileSaveService;
 import javax.swing.*;
+import javax.xml.ws.Service;
 import java.awt.*;
 import java.awt.geom.Point2D;
 
@@ -38,27 +40,20 @@ public class Task18Form extends JFrame {
             Point2D.Double center;
 
             try {
-
                 radius = Double.valueOf(radiusTextField.getText());
                 if(radius<=0 ){resultTextArea.setText("Радиус не может быть меньше нуля");return;}
                 Double x = Double.valueOf(centerXTextField.getText());
                 Double y = Double.valueOf(centerYTextField.getText());
                 center = new Point.Double(x, y);
-
-
-
-
-//                queueWithCell.forEach(ceil -> resultTextArea.append(ceil.toString() + " distance to center " + ceil.getDistanceTo(center.x, center.y) + "\n"));
             } catch (NumberFormatException e1) {
                 resultTextArea.setText("Что то введено не верно");
                 return;
             }
 
-            Collection<Ceil> queueWithCell = task18.getQueueWithCell(center, radius);
+            Queue<Ceil> queueWithCell = task18.getQueueWithCell(center, radius);
             resultTextArea.setText("");
-            Iterator<Ceil> iterator = queueWithCell.iterator();
-            while (iterator.hasNext()) {
-                Ceil ceil = iterator.next();
+            while (!queueWithCell.isEmpty()) {
+                Ceil ceil = queueWithCell.remove();
                 resultTextArea.append(ceil.toString() + " distance to center " + ceil.getDistanceTo(center.x, center.y) + "\n");
             }
             saveToFileButton.setEnabled(true);
@@ -66,31 +61,8 @@ public class Task18Form extends JFrame {
         });
 
         saveToFileButton.addActionListener(e->{
-            writeTextToFile(resultTextArea.getText());
+            FileService.saveDataWithFileChooser(resultTextArea.getText());
         });
-
-    }
-    public void writeTextToFile(String text) {
-        JFileChooser fileChooser = new JFileChooser(System.getProperty("user.dir"));
-        int saveDialog = fileChooser.showSaveDialog(null);
-        if (saveDialog == JFileChooser.APPROVE_OPTION) {
-           File file = fileChooser.getSelectedFile();
-            if (!file.exists()) {
-                try {
-                    file.createNewFile();
-                } catch (IOException e1) {
-                    e1.printStackTrace();
-                }
-            }
-
-            try {
-                java.io.FileWriter fw = new java.io.FileWriter(file);
-                fw.write(text);
-                fw.close();
-            } catch (IOException e1) {
-                e1.printStackTrace();
-            }
-        }
 
     }
 }

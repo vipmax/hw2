@@ -9,6 +9,9 @@ import java.util.List;
 import java.util.Map;
 
 /**
+ * 17.	На плоскости задано N точек.
+ * Вывести в файл описания всех прямых, которые проходят более чем через 2 точки из заданных.
+ * Для каждой прямой указать, через сколько точек она проходит. Использовать класс HashMap.
  * Created by vipmax on 21.04.2014.
  */
 public class Task17 {
@@ -34,6 +37,12 @@ public class Task17 {
         return points;
     }
 
+    /**
+     * возвращает коллекцию прямых, которые проходят более чем через 2 точки из заданных.
+     * Для каждой прямой указано, через сколько точек она проходит.
+     * @param pointList список точек
+     * @return коллекцию линий с количеством
+     */
     public Map<Line2D, Integer> getThisLineMap(List<Point> pointList) {
         Map<Line2D, Integer> map = new HashMap<>();
         for (int i = 0; i < pointList.size(); i++) {
@@ -41,11 +50,12 @@ public class Task17 {
 
                 Point p1 = pointList.get(i);
                 Point p2 = pointList.get(j);
+
                 if (p1.equals(p2)) {
                     continue;
                 }
-                Line2D.Double line = new Line2D.Double(p1, p2);
 
+                Line2D.Double line = new Line2D.Double(p1, p2);
                 map.put(line, 2);
             }
         }
@@ -71,6 +81,13 @@ public class Task17 {
 
     }
 
+    /**
+
+     * пересекается ли линия с точкой
+     * @param line2D линия
+     * @param p точка
+     * @return пересекается ли линия с точкой
+     */
     public boolean intersects(Line2D line2D, Point p) {
         return line2D.ptLineDist(p) <= 0.01;
     }

@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
+ * 8.Умножить два многочлена заданной степени
+ * если коэффициенты многочленов хранятся в различных списках.
  * Created by vipmax on 14.04.2014.
  */
 public class Task8 {
@@ -12,6 +14,12 @@ public class Task8 {
         new Task8Form(this);
     }
 
+    /**
+     *
+     * @param list1 многочлен 1
+     * @param list2 многочлен 2
+     * @return многочлен произведения многочленов 1 и 2
+     */
     public List<Double> mult(List<Double> list1, List<Double> list2) {
 
         List<Double> resultList = new ArrayList<>();

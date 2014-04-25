@@ -7,6 +7,11 @@ import java.util.List;
 import java.util.Set;
 
 /**
+ * 10. Задан файл с текстом на английском языке.
+ * Выделить все различные слова.
+ * Слова, отличающиеся  только регистром букв, считать одинаковыми.
+ * Использовать класс HashSet.
+ *
  * Created by vipmax on 15.04.2014.
  */
 public class Task10 {
@@ -25,6 +30,11 @@ public class Task10 {
         this.list = list;
     }
 
+    /**
+     * текст из файла записывает в список
+     * @param file файл
+     * @return список строк
+     */
     public List<String> listFromFile(File file) {
 
         List<String> list = new ArrayList<>();
@@ -46,6 +56,12 @@ public class Task10 {
 
     }
 
+
+    /**
+     *  возвращает все различные слова из списка строк с текстом.
+     * @param list список строк с текстом
+     * @return  множество слов
+     */
     public Set<String> toSet(List<String> list) {
         Set<String> set = new HashSet<>();
 

@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
+ * 2.Создает список из элементов каталога и его подкаталогов.
  * Created by vipmax on 13.04.2014.
  */
 public class Task2 {
@@ -15,6 +16,11 @@ public class Task2 {
         Task2Form task2Form = new Task2Form(this);
     }
 
+    /**
+     * возвращает список подпапок папки
+     * @param path путь папки
+     * @return Список подпапок папки
+     */
     public List<String> dirListFromFilePath(String path) {
 
         File myDir = new File(path);

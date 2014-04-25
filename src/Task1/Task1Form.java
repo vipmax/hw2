@@ -1,10 +1,14 @@
 package Task1;
 
+import Services.FileService;
+
 import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
-import java.io.File;
-import java.io.IOException;
+import java.io.*;
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -33,45 +37,27 @@ public class Task1Form extends JFrame {
             }
         });
 
-        chooseFileButton.addActionListener(e -> {
-            if (!textArea1.getText().isEmpty())
-                textArea1.setText("");
-            JFileChooser fileChooser = new JFileChooser(System.getProperty("user.dir"));
-            int openDialog = fileChooser.showOpenDialog(this);
-            if (openDialog == JFileChooser.APPROVE_OPTION) {
-                File selectedFile = fileChooser.getSelectedFile();
-                List<String> strings = task1.listFromFile(selectedFile);
-                task1.setStringList(strings);
-                strings.forEach(str -> {
-                    textArea1.append(str + "\n");
+        chooseFileButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
 
-                });
+
+                List<String> strings = FileService.openFileWithFileChooser();
+                task1.setStringList(strings);
+                if (!textArea1.getText().isEmpty())
+                    textArea1.setText("");
+
+                strings.forEach(str -> textArea1.append(str + "\n"));
 
                 flipButton.setEnabled(true);
                 saveInFileButton.setEnabled(true);
-            }
 
+
+            }
         });
 
         saveInFileButton.addActionListener(e -> {
-            String text = textArea1.getText();
-            System.out.println(text);
-
-            JFileChooser fileChooser = new JFileChooser(System.getProperty("user.dir"));
-            int saveDialog = fileChooser.showSaveDialog(this);
-            if (saveDialog == JFileChooser.APPROVE_OPTION) {
-                File file = fileChooser.getSelectedFile();
-                if (!file.exists()) {
-                    try {
-                        file.createNewFile();
-                    } catch (IOException e1) {
-                        e1.printStackTrace();
-                    }
-                }
-
-                task1.saveIntoFile(textArea1.getText(), file.getPath());
-            }
-
+            FileService.saveDataWithFileChooser(textArea1.getText());
         });
         flipButton.addActionListener(e -> {
             textArea1.setText("");

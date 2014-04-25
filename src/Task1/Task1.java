@@ -5,9 +5,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
+ * 1.Вводит строки из файла, записывает в список. Выводит строки в файл в обратном порядке.
  * Created by vipmax on 13.04.2014.
  */
 public class Task1 {
+
     private List<String> stringList;
 
     public Task1() {
@@ -54,16 +56,5 @@ public class Task1 {
         return newList;
     }
 
-    public void saveIntoFile(String writtenString, String path) {
 
-        File newTextFile = new File(path);
-
-        try {
-            FileWriter fw = new FileWriter(newTextFile);
-            fw.write(writtenString);
-            fw.close();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
 }

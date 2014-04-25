@@ -1,11 +1,13 @@
 package Task19;
 
-import java.awt.*;
-import java.awt.geom.Point2D;
-import java.util.*;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
+ * 19.	На плоскости задано N отрезков.
+ * Найти точку пересечения двух отрезков, имеющую минимальную абсциссу.
+ * Использовать класс TreeMap.
+ *
  * Created by vipmax on 20.04.2014.
  */
 public class Task19 {
@@ -24,7 +26,12 @@ public class Task19 {
         lineList.add(line);
     }
 
-    public Intersection getInterSectionInfo(List<Line> lineList) {
+    /**
+     * ищет точку пересечения двух отрезков, имеющую минимальную абсциссу.
+     * @param lineList список линий
+     * @return точку пересечения двух отрезков, имеющую минимальную абсциссу.
+     */
+    public Intersection getMinXIntersection(List<Line> lineList) {
         if (lineList.isEmpty()) {
             return null;
         }
